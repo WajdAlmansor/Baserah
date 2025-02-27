@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B37F9ED82D6DCA4000E70C47 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B37F9ED72D6DCA4000E70C47 /* FirebaseAnalytics */; };
+		B37F9EDA2D6DCA4000E70C47 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = B37F9ED92D6DCA4000E70C47 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B3EE7D1F2D6C549600D7493B /* GP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37F9ED82D6DCA4000E70C47 /* FirebaseAnalytics in Frameworks */,
+				B37F9EDA2D6DCA4000E70C47 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = GP;
 			packageProductDependencies = (
+				B37F9ED72D6DCA4000E70C47 /* FirebaseAnalytics */,
+				B37F9ED92D6DCA4000E70C47 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = GP;
 			productReference = B3EE7D1F2D6C549600D7493B /* GP.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = B3EE7D162D6C549600D7493B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B37F9ED62D6DCA4000E70C47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3EE7D202D6C549600D7493B /* Products */;
 			projectDirPath = "";
@@ -252,8 +264,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GP/Preview Content\"";
+				DEVELOPMENT_TEAM = WBAAMR6V99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to recognize objects.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,8 +294,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GP/Preview Content\"";
+				DEVELOPMENT_TEAM = WBAAMR6V99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to recognize objects.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,6 +338,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B37F9ED62D6DCA4000E70C47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B37F9ED72D6DCA4000E70C47 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37F9ED62D6DCA4000E70C47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B37F9ED92D6DCA4000E70C47 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37F9ED62D6DCA4000E70C47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3EE7D172D6C549600D7493B /* Project object */;
 }
